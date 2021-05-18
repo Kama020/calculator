@@ -128,4 +128,49 @@ namespace Calculator.Unittests
             Assert.AreEqual(calc.SecondIsPossitive(), false);
         }
     }
+    [TestClass]
+    public class MinTests
+    {
+        [TestMethod]
+        public void Calc_Min_Equal()
+        {
+            Calc.Calculator calc = new Calc.Calculator(1, 1);
+            Assert.AreEqual(calc.Min(), 1);
+        }
+        public void Calc_Min_EqualNegative()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-5, -5);
+            Assert.AreEqual(calc.Min(), -5);
+        }
+        public void Calc_Min_First()
+        {
+            Calc.Calculator calc = new Calc.Calculator(7, 9);
+            Assert.AreEqual(calc.Min(), 7);
+        }
+        public void Calc_Min_Second()
+        {
+            Calc.Calculator calc = new Calc.Calculator(2, 1);
+            Assert.AreEqual(calc.Min(), 1);
+        }
+        public void Calc_Min_FirstNegative()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-5, -3);
+            Assert.AreEqual(calc.Min(), -5);
+        }
+        public void Calc_Min_SecondNegative()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-2, -9);
+            Assert.AreEqual(calc.Min(), -9);
+        }
+        public void Calc_Min_FirstMixed()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-5, 9);
+            Assert.AreEqual(calc.Min(), -5);
+        }
+        public void Calc_Min_SecondMixed()
+        {
+            Calc.Calculator calc = new Calc.Calculator(10, -9);
+            Assert.AreEqual(calc.Min(), -9);
+        }
+    }
 }

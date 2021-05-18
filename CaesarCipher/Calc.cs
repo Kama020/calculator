@@ -18,4 +18,18 @@ namespace Calc
     {
             return val1 + val2;
     }
+    public bool FirstIsPossitive()
+    {
+        if (val1 > 0)
+            return true;
+        else
+            return false;
+    }
+    public bool SecondIsPossitive()
+    {
+        if (val2 > 0)
+            return true;
+        else
+            return false;
+    }
 }
