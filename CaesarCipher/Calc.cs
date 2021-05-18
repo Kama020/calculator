@@ -39,4 +39,11 @@ namespace Calc
         else
             return val1;
     }
+    public long Max()
+    {
+        if (val1 > val2)
+            return val1;
+        else
+            return val2;
+    }
 }
