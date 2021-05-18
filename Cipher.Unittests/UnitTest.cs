@@ -87,6 +87,45 @@ namespace Calculator.Unittests
             Calc.Calculator calc = new Calc.Calculator(-2147483647, -2147483647);
             Assert.AreEqual(calc.Adds(), -4294967294);
         }
-
-
     }
+
+    [TestClass]
+    public class FirstIsPossitiveTests
+    {
+        [TestMethod]
+        public void Calc_FirstIsPossitive_P()
+        {
+            Calc.Calculator calc = new Calc.Calculator(2, 1);
+            Assert.AreEqual(calc.FirstIsPossitive(), true);
+        }
+        public void Calc_FirstIsPossitive_N()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-2, 1);
+            Assert.AreEqual(calc.FirstIsPossitive(), false);
+        }
+        public void Calc_FirstIsPossitive_0()
+        {
+            Calc.Calculator calc = new Calc.Calculator(0, 1);
+            Assert.AreEqual(calc.FirstIsPossitive(), false);
+        }
+    }
+    public class SecondIsPossitiveTests
+    {
+        [TestMethod]
+        public void Calc_FirstIsPossitive_P()
+        {
+            Calc.Calculator calc = new Calc.Calculator(2, 1);
+            Assert.AreEqual(calc.SecondIsPossitive(), true);
+        }
+        public void Calc_FirstIsPossitive_N()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-2, -3);
+            Assert.AreEqual(calc.SecondIsPossitive(), false);
+        }
+        public void Calc_FirstIsPossitive_0()
+        {
+            Calc.Calculator calc = new Calc.Calculator(0, 0);
+            Assert.AreEqual(calc.SecondIsPossitive(), false);
+        }
+    }
+}
