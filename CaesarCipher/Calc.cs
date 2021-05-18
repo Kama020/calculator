@@ -3,6 +3,9 @@ namespace Calc
 {
     public class Calculator
     {
-   
+        public long Subs()
+        {
+            return val1 - val2;
+        }
     }
 }
