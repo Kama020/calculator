@@ -13,37 +13,38 @@ namespace Calc
         {
             return val1 - val2;
         }
-    }
         public long Adds()
-    {
+        {
             return val1 + val2;
+        }
+        public bool FirstIsPossitive()
+        {
+            if (val1 > 0)
+                return true;
+            else
+                return false;
+        }
+        public bool SecondIsPossitive()
+        {
+            if (val2 > 0)
+                return true;
+            else
+                return false;
+        }
+        public long Min()
+        {
+            if (val1 > val2)
+                return val2;
+            else
+                return val1;
+        }
+        public long Max()
+        {
+            if (val1 > val2)
+                return val1;
+            else
+                return val2;
+        }
     }
-    public bool FirstIsPossitive()
-    {
-        if (val1 > 0)
-            return true;
-        else
-            return false;
-    }
-    public bool SecondIsPossitive()
-    {
-        if (val2 > 0)
-            return true;
-        else
-            return false;
-    }
-    public long Min()
-    {
-        if (val1 > val2)
-            return val2;
-        else
-            return val1;
-    }
-    public long Max()
-    {
-        if (val1 > val2)
-            return val1;
-        else
-            return val2;
-    }
+        
 }
