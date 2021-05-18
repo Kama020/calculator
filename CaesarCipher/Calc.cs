@@ -32,4 +32,11 @@ namespace Calc
         else
             return false;
     }
+    public long Min()
+    {
+        if (val1 > val2)
+            return val2;
+        else
+            return val1;
+    }
 }

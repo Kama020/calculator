@@ -184,4 +184,56 @@ namespace Calculator.Unittests
             Assert.AreEqual(calc.Min(), -9);
         }
     }
+    [TestClass]
+    public class MaxTests
+    {
+        [TestMethod]
+        public void CalcMaxEqual()
+        {
+            Calc.Calculator calc = new Calc.Calculator(1, 1);
+            Assert.AreEqual(calc.Max(), 1);
+        }
+        [TestMethod]
+        public void CalcMaxEqualNegative()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-5, -5);
+            Assert.AreEqual(calc.Max(), -5);
+        }
+        [TestMethod]
+        public void CalcMaxFirst()
+        {
+            Calc.Calculator calc = new Calc.Calculator(7, 2);
+            Assert.AreEqual(calc.Max(), 7);
+        }
+        [TestMethod]
+        public void CalcMaxSecond()
+        {
+            Calc.Calculator calc = new Calc.Calculator(0, 1);
+            Assert.AreEqual(calc.Max(), 1);
+        }
+        [TestMethod]
+        public void CalcMaxFirstNegative()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-5, -2);
+            Assert.AreEqual(calc.Min(), -5);
+        }
+        [TestMethod]
+        public void CalcMaxSecondNegative()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-11, -9);
+            Assert.AreEqual(calc.Max(), -9);
+        }
+        [TestMethod]
+        public void CalcMaxFirstMixed()
+        {
+            Calc.Calculator calc = new Calc.Calculator(10, -9);
+            Assert.AreEqual(calc.Max(), 10);
+        }
+        [TestMethod]
+        public void CalcMaxSecondMixed()
+        {
+            Calc.Calculator calc = new Calc.Calculator(-420, 10);
+            Assert.AreEqual(calc.Max(), 10);
+        }
+    }
 }
