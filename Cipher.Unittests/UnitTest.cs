@@ -98,11 +98,13 @@ namespace Calculator.Unittests
             Calc.Calculator calc = new Calc.Calculator(2, 1);
             Assert.AreEqual(calc.FirstIsPossitive(), true);
         }
+        [TestMethod]
         public void Calc_FirstIsPossitive_N()
         {
             Calc.Calculator calc = new Calc.Calculator(-2, 1);
             Assert.AreEqual(calc.FirstIsPossitive(), false);
         }
+        [TestMethod]
         public void Calc_FirstIsPossitive_0()
         {
             Calc.Calculator calc = new Calc.Calculator(0, 1);
@@ -117,11 +119,13 @@ namespace Calculator.Unittests
             Calc.Calculator calc = new Calc.Calculator(2, 1);
             Assert.AreEqual(calc.SecondIsPossitive(), true);
         }
+        [TestMethod]
         public void Calc_FirstIsPossitive_N()
         {
             Calc.Calculator calc = new Calc.Calculator(-2, -3);
             Assert.AreEqual(calc.SecondIsPossitive(), false);
         }
+        [TestMethod]
         public void Calc_FirstIsPossitive_0()
         {
             Calc.Calculator calc = new Calc.Calculator(0, 0);
@@ -137,36 +141,43 @@ namespace Calculator.Unittests
             Calc.Calculator calc = new Calc.Calculator(1, 1);
             Assert.AreEqual(calc.Min(), 1);
         }
+        [TestMethod]
         public void Calc_Min_EqualNegative()
         {
             Calc.Calculator calc = new Calc.Calculator(-5, -5);
             Assert.AreEqual(calc.Min(), -5);
         }
+        [TestMethod]
         public void Calc_Min_First()
         {
             Calc.Calculator calc = new Calc.Calculator(7, 9);
             Assert.AreEqual(calc.Min(), 7);
         }
+        [TestMethod]
         public void Calc_Min_Second()
         {
             Calc.Calculator calc = new Calc.Calculator(2, 1);
             Assert.AreEqual(calc.Min(), 1);
         }
+        [TestMethod]
         public void Calc_Min_FirstNegative()
         {
             Calc.Calculator calc = new Calc.Calculator(-5, -3);
             Assert.AreEqual(calc.Min(), -5);
         }
+        [TestMethod]
         public void Calc_Min_SecondNegative()
         {
             Calc.Calculator calc = new Calc.Calculator(-2, -9);
             Assert.AreEqual(calc.Min(), -9);
         }
+        [TestMethod]
         public void Calc_Min_FirstMixed()
         {
             Calc.Calculator calc = new Calc.Calculator(-5, 9);
             Assert.AreEqual(calc.Min(), -5);
         }
+        [TestMethod]
         public void Calc_Min_SecondMixed()
         {
             Calc.Calculator calc = new Calc.Calculator(10, -9);
